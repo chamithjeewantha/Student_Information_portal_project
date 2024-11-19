@@ -1,17 +1,18 @@
 import "../assests/css/compo.css"
-export default function studentTable(props){
+
+export default function StudentTable(props){
 
     return(
         <div className="outerDiv">
             <div className="leftDiv">
-                <table>
+                <table border="1">
                     <thead>
                         <tr>
                             <td>First Name</td>
                             <td>Last Name</td>
                             <td>course</td>
                             <td>Country</td>
-                  
+                            <td>Profile</td>
                         </tr>
                     </thead>
                     <tbody>
@@ -22,7 +23,7 @@ export default function studentTable(props){
                             <td>{student.lastname}</td>
                             <td>{student.course}</td>
                             <td>{student.address.country}</td>
-                            
+                            <td><button>View</button></td>
                         </tr>
                         ) 
                     }
