@@ -9,11 +9,24 @@ export default function studentTable(props){
                         <tr>
                             <td>First Name</td>
                             <td>Last Name</td>
-                            <td>Cause</td>
+                            <td>course</td>
                             <td>Country</td>
-                            <td>Profile</td>
+                  
                         </tr>
                     </thead>
+                    <tbody>
+                        {
+                        props.students.map( student=>
+                        <tr>
+                            <td>{student.firstname}</td>
+                            <td>{student.lastname}</td>
+                            <td>{student.course}</td>
+                            <td>{student.address.country}</td>
+                            
+                        </tr>
+                        ) 
+                    }
+                    </tbody>
                 </table>
             </div>
 
